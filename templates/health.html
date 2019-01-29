@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>You Quit</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+	.bg-1 { 
+		background-color: #1abc9c; /* Green */
+		color: #ffffff;
+	}
+	.width{
+		width: 60%;
+		margin: auto;
+		padding-bottom: 20px;   
+	}
+
+</style>
+</head>
+<body>
+	<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="log_in1.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Log in</a>
+  <a href="Sign-up1.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign up</a>
+  <a href="log_out.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Log out</a>
+  
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="{{ url_for('calendar_route')}}" class="w3-bar-item w3-button">Calendar</a>
+      <a href="{{ url_for('Emotions_route')}}" class="w3-bar-item w3-button">Mood</a>
+      <a href="{{ url_for('cigarettes_route')}}" class="w3-bar-item w3-button">Cigarettes</a>
+      <a href="{{ url_for('exercise_route')}}" class="w3-bar-item w3-button">Exercise</a>
+      <a href="{{ url_for('craving_route')}}" class="w3-bar-item w3-button">Craving</a>
+      <a href="{{ url_for('health_route')}}" class="w3-bar-item w3-button">Health</a>
+      <a href="{{ url_for('nicotine_route')}}" class="w3-bar-item w3-button">Nicotine</a>
+    </div>
+  </div>
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="{{ url_for('calendar_route')}}" class="w3-bar-item w3-button">Calendar</a>
+    <a href="{{ url_for('Emotions_route')}}" class="w3-bar-item w3-button">Mood</a>
+    <a href="{{ url_for('cigarettes_route')}}" class="w3-bar-item w3-button">Cigarettes</a>
+    <a href="{{ url_for('exercise_route')}}" class="w3-bar-item w3-button">Exerise</a>
+    <a href="{{ url_for('craving_route')}}" class="w3-bar-item w3-button">Craving</a>
+    <a href="{{ url_for('health_route')}}" class="w3-bar-item w3-button">Health</a>
+    <a href="{{ url_for('nicotine_route')}}" class="w3-bar-item w3-button">Nicotine</a>
+  </div>
+</div> 
+
+	<div class="container-fluid bg-1 text-center">
+	<br>
+	<br>
+	<br>
+	<h1> How is you health? </h1>
+
+	<form class="form-inline">
+		<form method="POST">
+			<p><input type="text" class="form-control" size="50" placeholder="Fill here" required></p>
+			<div class="input-group-btn">
+				<button type="button" class="btn btn-danger">Submit</button>
+			</div>
+
+</body>
+</html>

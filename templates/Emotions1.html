@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<title>You Quit</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+	.bg-1 { 
+		background-color: #1abc9c; /* Green */
+		color: #ffffff;
+	}
+	.width{
+		width: 60%;
+		margin: auto;
+		padding-bottom: 20px;   
+	}
+	#picture1{
+		width: 256px;
+		height:256px;
+		left: 100px;
+    }
+    #picture2{
+    	width: 256px;
+    	height:256px;
+    }
+    #picture3{
+    	width: 300px;
+    	height:256px;
+    }
+    #picture4{
+    	width: 300px;
+    	height:256px;
+    }
+    #Happy{
+    	left: 100px;
+      }
+    #Angry{
+      text-align: center;
+      }
+    #Confused{
+      }
+    #Sad{
+
+    }
+
+    h1{
+    	font-family: Verdana, sans-serif;
+    	font-size: 53px;
+        font-weight: 500;
+    }
+
+    ul {
+        font-family:"FreeMono", monospace;
+        font-size: 17px;
+        text-decoration: underline;
+        margin: 0;
+        padding : 0;
+        overflow: hidden;
+        background-color: #1abc9c;
+        list-style: none;
+        color: #ffffff;
+        padding-top: 0px;
+    }
+    li {
+        float: left;
+    }
+    /*#Home { padding: 500px; }*/
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 60px;
+    }
+    .navbarmany {
+        padding-left: 200px;
+
+    }
+    li a:hover {
+        background-color: white;
+        color: #1abc9c;
+    }
+</style>
+<body>
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="{{ url_for('login_route')}}" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Log in</a>
+  <a href="{{ url_for('signup_route')}}" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign up</a>
+  <a href="{{ url_for('logout_route')}}" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Log out</a>
+  
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="{{ url_for('calendar_route')}}" class="w3-bar-item w3-button">Calendar</a>
+      <a href="{{ url_for('Emotions_route')}}" class="w3-bar-item w3-button">Mood</a>
+      <a href="{{ url_for('cigarettes_route')}}" class="w3-bar-item w3-button">Cigarettes</a>
+      <a href="{{ url_for('exercise_route')}}" class="w3-bar-item w3-button">Exercise</a>
+      <a href="{{ url_for('craving_route')}}" class="w3-bar-item w3-button">Craving</a>
+      <a href="{{ url_for('health_route')}}" class="w3-bar-item w3-button">Health</a>
+      <a href="{{ url_for('nicotine_route')}}" class="w3-bar-item w3-button">Nicotine</a>
+    </div>
+  </div>
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="{{ url_for('calendar_route')}}" class="w3-bar-item w3-button">Calendar</a>
+    <a href="{{ url_for('Emotions_route')}}" class="w3-bar-item w3-button">Mood</a>
+    <a href="{{ url_for('cigarettes_route')}}" class="w3-bar-item w3-button">Cigarettes</a>
+    <a href="{{ url_for('exercise_route')}}" class="w3-bar-item w3-button">Exerise</a>
+    <a href="{{ url_for('craving_route')}}" class="w3-bar-item w3-button">Craving</a>
+    <a href="{{ url_for('health_route')}}" class="w3-bar-item w3-button">Health</a>
+    <a href="{{ url_for('nicotine_route')}}" class="w3-bar-item w3-button">Nicotine</a>
+  </div>
+</div> 
+
+<div class="container-fluid bg-1 text-center">
+	<br>
+	<br>
+	<br>
+	<h1>Emotions</h1>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<br>
+		
+		<img src="/static/img/Happy.png" id="picture1" onclick="submitImage('Happy.png');"> 
+		
+	</div>
+	<div class="col-md-3" class="angry">
+		<br>
+		<img src="/static/img/Angry.png" id="picture2" onclick="submitImage('Angry.png');"> 
+		
+	</div>
+	<div class="col-md-3">
+		<br>
+		<img src="/static/img/Confused.png" id="picture3" onclick="submitImage('Confused.png');">
+		
+	</div>
+	<div class="col-md-3">
+		<br>
+		<img src="/static/img/Sad.png" id="picture4" onclick="submitImage('Sad.png');">
+		
+	</div>
+</div>
+
+<form action="/#1" method="POST" id="image-form">
+
+	<input type="hidden" name="image" value="" id="image-selection">
+	
+
+</form>
+
+<script type="text/javascript">
+	function submitImage(s) {
+		alert(s + " was selected");
+		var form_image = document.getElementById("image-selection");
+		form_image.value = s;
+		var form = document.getElementById("image-form");
+		form.submit();
+
+	}
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
