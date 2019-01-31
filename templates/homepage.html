@@ -9,42 +9,37 @@
 <body id="myPage">
 
 
-<!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="log_in1.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Log in</a>
-  <a href="Sign-up1.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign up</a>
-  <a href="log_out.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Log out</a>
+  <a href="{{ url_for('home')}}" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+  <a href="{{ url_for('login_route')}}" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Log in</a>
+  <a href="{{ url_for('signup_route')}}" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign up</a>
+  <a href="{{ url_for('logout_route')}}" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Log out</a>
   
     <div class="w3-dropdown-hover w3-hide-small">
     <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
       <a href="{{ url_for('calendar_route')}}" class="w3-bar-item w3-button">Calendar</a>
-      <a href="Emotions1.html" class="w3-bar-item w3-button">Mood</a>
-      <a href="Cigarettes1.html" class="w3-bar-item w3-button">Cigarettes</a>
-      <a href="exercise.html" class="w3-bar-item w3-button">Exercise</a>
-      <a href="cravings.html" class="w3-bar-item w3-button">Craving</a>
-      <a href="health.html" class="w3-bar-item w3-button">Health</a>
-      <a href="nicotine.html" class="w3-bar-item w3-button">Nicotine</a>
+      <a href="{{ url_for('Emotions_route')}}" class="w3-bar-item w3-button">Mood</a>
+      <a href="{{ url_for('cigarettes_route')}}" class="w3-bar-item w3-button">Cigarettes</a>
+      <a href="{{ url_for('exercise_route')}}" class="w3-bar-item w3-button">Exercise</a>
+      <a href="{{ url_for('craving_route')}}" class="w3-bar-item w3-button">Craving</a>
+      <a href="{{ url_for('health_route')}}" class="w3-bar-item w3-button">Health</a>
+      <a href="{{ url_for('nicotine_route')}}" class="w3-bar-item w3-button">Nicotine</a>
     </div>
   </div>
- <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#team" class="w3-bar-item w3-button">Team</a>
-    <a href="#work" class="w3-bar-item w3-button">Work</a>
-    <a href="#pricing" class="w3-bar-item w3-button">Price</a>
-    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-    <a href="#" class="w3-bar-item w3-button">Search</a>
+    <a href="{{ url_for('calendar_route')}}" class="w3-bar-item w3-button">Calendar</a>
+    <a href="{{ url_for('Emotions_route')}}" class="w3-bar-item w3-button">Mood</a>
+    <a href="{{ url_for('cigarettes_route')}}" class="w3-bar-item w3-button">Cigarettes</a>
+    <a href="{{ url_for('exercise_route')}}" class="w3-bar-item w3-button">Exerise</a>
+    <a href="{{ url_for('craving_route')}}" class="w3-bar-item w3-button">Craving</a>
+    <a href="{{ url_for('health_route')}}" class="w3-bar-item w3-button">Health</a>
+    <a href="{{ url_for('nicotine_route')}}" class="w3-bar-item w3-button">Nicotine</a>
   </div>
 </div> 
-<!-- Image Header -->
-<div class="w3-display-container w3-animate-opacity">
-  <img src="/static/img/newww.jpeg alt="girl" style="width:40%;min-height:350px;max-height:600px;">
-  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
 
-  </div>
-</div>
 
 <div class="w3-container w3-padding-64 w3-center" id="team">
 <h2>Our Goals</h2>
@@ -53,17 +48,17 @@
 <div class="w3-row"><br>
 
 <div class="w3-quarter">
-  <img src="/static/pack.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="/static/img/pack.png" alt="Boss" style="width:45% " class="w3-circle w3-hover-opacity">
   <h3>Reduce your cigarette consumption</h3>
 </div>
 
 <div class="w3-quarter">
-  <img src="/static/img/health.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="/static/img/health.png" alt="Boss" style="width:45% " class="w3-circle w3-hover-opacity">
   <h3>Track your health</h3>
 </div>
 
 <div class="w3-quarter">
-  <img src="/static/img/feel.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <img src="/static/img/feel.png" alt="Boss" style="width:45% " class="w3-circle w3-hover-opacity">
   <h3>How do you feel</h3>
 </div>
 

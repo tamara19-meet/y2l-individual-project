@@ -5,12 +5,9 @@ app = Flask(__name__)
 app.secret_key ="I don't know"
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
 def home():
-  if request.method == 'GET':
-    return render_template('neww.html')
-  else:
-    return render_template('neww1.html')
+  return render_template('homepage.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup_route():
