@@ -82,7 +82,7 @@
 		<img src="/static/img/no.jpeg" id="picture2" onclick="submitImage('no.jpeg.png');"> 
 	</div>
 </div>
-<form action="/#3" method="POST" id="image-form">
+<form action="{{ url_for('Information_route')}}" method="POST" id="image-form">
 
 	<input type="hidden" name="image1" value="" id="image-selection">
 	

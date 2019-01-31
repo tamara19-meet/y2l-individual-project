@@ -44,17 +44,17 @@
       <h1>Track your:</h1>
     </div>
     <div class="w3-padding-64">
-      <a href="Emotions1.html" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Mood</a>
-      <a href="Cigarettes1.html" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Cigarettes consumption</a>
-      <a href="exercise.html" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Exercise</a>
-      <a href="health.html" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Health</a>
-      <a href="nicotine.html" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Nicotine</a>
-      <a href="cravings.html" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Cravings</a>
+      <a href="{{ url_for('Emotions_route')}}" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Mood</a>
+      <a href="{{ url_for('calendar_route')}}" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">Cigarettes consumption</a>
+      <a href="{{ url_for('exercise_route')}}" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Exercise</a>
+      <a href="{{ url_for('health_route')}}" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Health</a>
+      <a href="{{ url_for('nicotine_route')}}" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Nicotine</a>
+      <a href="{{ url_for('craving_route')}}" class="w3-button w3-black w3-block w3-hover-dark-grey w3-padding-16">Cravings</a>
     </div>
   </div>
   <div class="w3-half w3-blue-grey w3-container" style="height:700px">
     <div class="w3-padding-64 w3-center">
-      <img src="/static/img/girl.png" class="w3-margin w3-circle" alt="Person" style="width:50%">
+      <img src="/static/img/girl.png" class="w3-margin w3-circle" style="width:50%">
       <div class="w3-left-align w3-padding-large">
         <p>Each day you can track any of the options on the left.</p>
         <p>This is to track your progress in quitting.</p>
